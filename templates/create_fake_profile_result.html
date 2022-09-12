@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Fake Profile Result</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/button.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/page.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div>
+        <section class="ftco-section">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center mb-5">
+                        <h2 class="heading-section">Creating Fake Profile</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-12 col-lg-12">
+                        <div class="wrap">
+                            <div class="img" style="background-image:url('./static/img/beach.jpg')">
+                            </div>
+                            <div class="login-wrap p-4 p-md-5">
+                                <div class="d-flex">
+                                    <div class="w-100">
+                                        <div class="">
+                                            <div class="col-md-12" style="overflow-y:auto;height: 500px;">
+                                                <table class="table table-border">
+                                                    <thead>
+                                                    <tr>
+                                                        {% for profileKey in profileKeys %}
+                                                            <th style="text-align: center;text-transform:capitalize;">{{profileKey}}</th>
+                                                        {% endfor %}
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {% for fakeProfile in fakeProfile_ %}
+                                                            <tr>
+                                                                <td>
+                                                                    <b style="text-transform:none !important;">{{fakeProfile[0]}} <br/>
+                                                                </td>
+                                                                <td>
+                                                                    <b style="text-transform:none !important;">{{fakeProfile[1]}} <br/>
+                                                                </td>
+                                                                <td>
+                                                                    <b style="text-transform:none !important;">{{fakeProfile[2]}} <br/>
+                                                                </td>
+                                                                <td>
+                                                                    <b style="text-transform:none !important;">{{fakeProfile[3]}} <br/>
+                                                                </td>
+                                                                <td>
+                                                                    <b style="text-transform:none !important;">{{fakeProfile[4]}} <br/>
+                                                                </td>
+                                                                <td>
+                                                                    <b style="text-transform:none !important;">{{fakeProfile[5]}} <br/>
+                                                                </td>
+                                                                <td>
+                                                                    <b style="text-transform:none !important;">{{fakeProfile[6]}} <br/>
+                                                                </td>
+                                                                <td>
+                                                                    <b style="text-transform:none !important;">{{fakeProfile[7]}} <br/>
+                                                                </td>
+                                                                <td>
+                                                                    <b style="text-transform:none !important;">{{fakeProfile[8]}} <br/>
+                                                                </td>
+                                                                <td>
+                                                                    <b style="text-transform:none !important;">{{fakeProfile[9]}} <br/>
+                                                                </td>
+                                                                <td>
+                                                                    <b style="text-transform:none !important;">{{fakeProfile[10]}} <br/>
+                                                                </td>
+                                                                <td>
+                                                                    <b style="text-transform:none !important;">{{fakeProfile[11]}} <br/>
+                                                                </td>
+                                                                <td>
+                                                                    <b style="text-transform:none !important;">{{fakeProfile[12]}} <br/>
+                                                                </td>
+                                                            </tr>
+                                                        {%endfor%}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
